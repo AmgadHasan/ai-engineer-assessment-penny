@@ -17,7 +17,7 @@ uv sync
 ```
 
 ### Set up environment variables
-Copy the example env file and add your api keys and connection details:
+Copy the example env file and add your LLM API and MongoDB connection details:
 ```sh
 cp .env.example .env
 ```
