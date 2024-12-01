@@ -27,14 +27,19 @@ To load the data into a mongodb cluster, run the following:
 ```sh
 uv run --env-file .env -m scripts.load_to_mongodb
 ```
+This will download the data from kaggle, extract it and load it into the mongodb server.
+
 
 To load the data into a sqlite database (needed to use the chatbot), run the following command:
 ```sh
 uv run --env-file .env -m scripts.load_to_sqlite
 ```
+This will create a sqlite database from the data that will be used by the LLM to answer the user queries.
 
 ### Run the chatbot app
 
 ```sh
 uv run --env-file .env -m src.main
 ```
+This will run a webapp at http://127.0.0.1:7860/ where we can interact with the chatbot.
+![alt text](assets/image.png)
