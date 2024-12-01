@@ -1,8 +1,10 @@
 import io
 import logging
 import time
-import requests
 import zipfile
+
+import requests
+
 
 def create_logger(logger_name, log_file, log_level):
     LOG_FORMAT = "[%(asctime)s | %(name)s | %(levelname)s | %(message)s]"

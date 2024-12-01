@@ -6,15 +6,15 @@ DATA_INFORMATION = {
         {
             "name": "Creation Date",
             "description": "System Date",
-            "additional_notes": "Date of purchase order entered by user, can be backdated"
+            "additional_notes": "Date of purchase order entered by user, can be backdated",
         },
         {
-            "name": "Purchase Date", 
+            "name": "Purchase Date",
             "description": "Date of purchase order entered by user",
             "key_details": [
                 "Can be backdated",
-                "Creation date is primarily used for tracking"
-            ]
+                "Creation date is primarily used for tracking",
+            ],
         },
         {
             "name": "Fiscal Year",
@@ -22,159 +22,149 @@ DATA_INFORMATION = {
             "details": {
                 "start_date": "July 1",
                 "end_date": "June 30",
-                "jurisdiction": "State of California"
+                "jurisdiction": "State of California",
             },
-            "unique_values": ['2014-2015', '2013-2014', '2012-2013'] 
+            "unique_values": ["2014-2015", "2013-2014", "2012-2013"],
         },
         {
             "name": "LPA Number",
             "description": "Leveraged Procurement Agreement Number",
             "aliases": ["Contract Number"],
-            "special_condition": "If contract number exists, amount is considered contract spend"
+            "special_condition": "If contract number exists, amount is considered contract spend",
         },
         {
             "name": "Purchase Order Number",
             "description": "Identifier for purchase order",
             "constraints": [
                 "Numbers are not unique",
-                "Different departments can have same purchase order number"
-            ]
+                "Different departments can have same purchase order number",
+            ],
         },
         {
             "name": "Requisition Number",
             "description": "Identifier for requisition",
             "constraints": [
-                "Numbers are not unique", 
-                "Different departments can have same requisition number"
-            ]
+                "Numbers are not unique",
+                "Different departments can have same requisition number",
+            ],
         },
         {
             "name": "Acquisition Type",
             "description": "Type of acquisition",
             "categories": [
                 "Non-IT Goods",
-                "Non-IT Services", 
-                "IT Goods", 
-                "IT Services"
-            ]
+                "Non-IT Services",
+                "IT Goods",
+                "IT Services",
+            ],
         },
         {
             "name": "Sub-Acquisition Type",
             "description": "Depends on primary acquisition type",
-            "recommendation": "Refer to full data dictionary for details"
+            "recommendation": "Refer to full data dictionary for details",
         },
         {
             "name": "Acquisition Method",
             "description": "Method used to make purchase",
-            "recommendation": "Consult data dictionary and supplemental acquisition method document"
+            "recommendation": "Consult data dictionary and supplemental acquisition method document",
         },
         {
             "name": "Sub-Acquisition Method",
             "description": "Depends on primary acquisition method",
-            "recommendation": "Refer to data dictionary for details"
+            "recommendation": "Refer to data dictionary for details",
         },
         {
             "name": "Department Name",
             "description": "Name of purchasing department",
-            "type": "Normalized field"
+            "type": "Normalized field",
         },
         {
             "name": "Supplier Code",
             "description": "Unique supplier identifier",
-            "type": "Normalized field"
+            "type": "Normalized field",
         },
         {
             "name": "Supplier Name",
-            "description": "Name entered by supplier during state registration"
+            "description": "Name entered by supplier during state registration",
         },
         {
             "name": "Supplier Qualifications",
             "description": "Certification categories",
             "categories": [
                 "Small Business (SB)",
-                "Small Business Enterprise (SBE)", 
+                "Small Business Enterprise (SBE)",
                 "Disabled Veteran Business Enterprise (DVBE)",
-                "Non-Profits (NP)", 
-                "Micro-Business (MB)"
+                "Non-Profits (NP)",
+                "Micro-Business (MB)",
             ],
-            "key_note": "Qualifications are not mutually exclusive; a supplier can have multiple certifications"
+            "key_note": "Qualifications are not mutually exclusive; a supplier can have multiple certifications",
         },
         {
             "name": "Supplier Zip Code",
-            "description": "Geographic identifier for supplier"
+            "description": "Geographic identifier for supplier",
         },
         {
             "name": "CalCard",
             "description": "State credit card usage",
-            "values": ["Yes", "No"]
+            "values": ["Yes", "No"],
         },
-        {
-            "name": "Item Name",
-            "description": "Name of items being purchased"
-        },
+        {"name": "Item Name", "description": "Name of items being purchased"},
         {
             "name": "Item Description",
-            "description": "Detailed description of items being purchased"
+            "description": "Detailed description of items being purchased",
         },
-        {
-            "name": "Quantity",
-            "description": "Number of items being purchased"
-        },
-        {
-            "name": "Unit Price",
-            "description": "Price per individual item"
-        },
+        {"name": "Quantity", "description": "Number of items being purchased"},
+        {"name": "Unit Price", "description": "Price per individual item"},
         {
             "name": "Total Price",
             "description": "Aggregate price of items",
-            "exclusions": ["Does not include taxes", "Does not include shipping"]
+            "exclusions": ["Does not include taxes", "Does not include shipping"],
         },
         {
             "name": "Classification Codes",
             "description": "United Nations Standard Products and Services Code (UNSPSC) v. 14",
             "details": [
                 "May have multiple UNSPSC numbers based on line items",
-                "Entered in eSCPRS system"
-            ]
+                "Entered in eSCPRS system",
+            ],
         },
         {
             "name": "Normalized UNSPSC",
             "description": "Standardized UNSPSC number",
-            "details": "First 8 digits identify entire purchase order"
+            "details": "First 8 digits identify entire purchase order",
         },
         {
             "name": "Commodity Title",
-            "description": "Correlated title based on 8-digit Normalized UNSPSC"
+            "description": "Correlated title based on 8-digit Normalized UNSPSC",
         },
         {
             "name": "Class",
-            "description": "Correlated class number based on 8-digit Normalized UNSPSC"
+            "description": "Correlated class number based on 8-digit Normalized UNSPSC",
         },
         {
             "name": "Class Title",
-            "description": "Correlated class title based on 8-digit Normalized UNSPSC"
+            "description": "Correlated class title based on 8-digit Normalized UNSPSC",
         },
         {
             "name": "Family",
-            "description": "Correlated family number based on 8-digit Normalized UNSPSC"
+            "description": "Correlated family number based on 8-digit Normalized UNSPSC",
         },
         {
             "name": "Family Title",
-            "description": "Correlated family title based on 8-digit Normalized UNSPSC"
+            "description": "Correlated family title based on 8-digit Normalized UNSPSC",
         },
         {
             "name": "Segment",
-            "description": "Correlated segment number based on 8-digit Normalized UNSPSC"
-        }
+            "description": "Correlated segment number based on 8-digit Normalized UNSPSC",
+        },
     ],
     "reference": {
         "unspsc_website": "http://www.unspsc.org/",
-        "version": "UNSPSC v. 14"
-    }
+        "version": "UNSPSC v. 14",
+    },
 }
 
-DATABASE_SCHEMA = \
-"""CREATE TABLE purchase_orders (
+DATABASE_SCHEMA = """CREATE TABLE purchase_orders (
         "Creation Date" DATE, 
         "Purchase Date" DATE, 
         "Fiscal Year" TEXT, 
@@ -208,10 +198,8 @@ DATABASE_SCHEMA = \
         "Location" TEXT
 )"""
 
-TEXT2SQL_SYSTEM_MESSAGE = (
-    """You're an excellent data analyst that writes sql queries based on questions and quries in natural langauge.
+TEXT2SQL_SYSTEM_MESSAGE = """You're an excellent data analyst that writes sql queries based on questions and quries in natural langauge.
     Return valid sql directly without any introductions"""
-)
 TEXT2SQL_USER_MESSAGE = dedent('''\
     You have access to data about purchase orders for the state of California.
     The SQL code that was used to create the database is given under `## DATABASE_SCHEMA:`.
@@ -234,12 +222,14 @@ TEXT2SQL_USER_MESSAGE = dedent('''\
     """
 ''')
 
+
 def format_sql_prompt(user_question: str):
     return TEXT2SQL_USER_MESSAGE.format(
         database_schema=DATABASE_SCHEMA,
         data_information=DATA_INFORMATION,
         user_question=user_question,
     )
+
 
 ANALYST_SYSTEM_MESSAGE = (
     """You're an excellent data analyst that answers user's questions."""
@@ -281,6 +271,7 @@ ANALYST_USER_MESSAGE = dedent('''\
     {sql_result}
 
 ''')
+
 
 def format_analyst_prompt(user_question: str, sql_query: str, sql_result: str):
     return ANALYST_USER_MESSAGE.format(

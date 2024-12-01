@@ -1,6 +1,5 @@
-import polars as pl
-from src.utils import download_and_extract
 from src.prepare_data import prepare_dataframe
+from src.utils import download_and_extract
 
 DATA_URL = "https://www.kaggle.com/api/v1/datasets/download/sohier/large-purchases-by-the-state-of-ca"
 
