@@ -1,3 +1,5 @@
+import os
+
 import polars as pl
 from pymongo import MongoClient
 
@@ -8,6 +10,7 @@ DATA_URL = "https://www.kaggle.com/api/v1/datasets/download/sohier/large-purchas
 
 DATASET_PATH = "./data/PURCHASE ORDER DATA EXTRACT 2012-2015_0.csv"
 
+MONGO_URL = os.environ.get("MONGODB_URL", "localhost:27017")
 MONGO_DB_NAME = "california_purchases"
 
 COLLECTION_NAME = "purchase_orders"
@@ -17,7 +20,7 @@ download_and_extract(url=DATA_URL)
 df = prepare_dataframe(dataset_path=DATASET_PATH)
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient(f"mongodb://{MONGO_URL}/")
 
 db = client[MONGO_DB_NAME]
 
